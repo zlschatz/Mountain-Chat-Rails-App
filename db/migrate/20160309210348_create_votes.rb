@@ -4,6 +4,9 @@ class CreateVotes < ActiveRecord::Migration
       t.integer :value
       t.integer :user_id
       t.integer :comment_id
+
+      t.timestamps null: false
+
     end
   end
 end

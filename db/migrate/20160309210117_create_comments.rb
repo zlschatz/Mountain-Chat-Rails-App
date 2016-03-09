@@ -4,6 +4,8 @@ class CreateComments < ActiveRecord::Migration
       t.text :content
       t.integer :user_id
       t.integer :trail_id
+
+      t.timestamps null: false
     end
   end
 end
