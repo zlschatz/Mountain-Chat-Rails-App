@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
+
   root 'mountains#show'
 
-
+  get 'login' => 'sessions#new'
+  delete 'logout' => 'sessions#destroy'
+  get 'register' => 'users#new'
 
 
 
