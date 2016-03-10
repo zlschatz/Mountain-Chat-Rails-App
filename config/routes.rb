@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :mountains, only: [:show]
+  resources :mountains, only: [:index]
   resources :trails, only: [:show]
 
   resources :trails do
