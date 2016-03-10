@@ -1,4 +1,25 @@
 Rails.application.routes.draw do
+
+  resources :mountains, only: [:index]
+  resources :trails, only: [:show]
+
+  resources :trails do
+    resources :comments, only: [:new, :create, :edit, :destroy]
+    resources :votes, only: [:create, :destroy]
+  end
+
+
+  resources :users, only: [:new, :show, :create]
+  resources :sessions, only: [:new, :create, :destroy]
+
+  root 'mountains#index'
+
+  get 'login' => 'sessions#new'
+  delete 'logout' => 'sessions#destroy'
+  get 'register' => 'users#new'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
