@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :show, :create]
   resources :sessions, only: [:new, :create, :destroy]
 
-  root 'mountains#show'
+  root 'mountains#index'
 
   get 'login' => 'sessions#new'
   delete 'logout' => 'sessions#destroy'
