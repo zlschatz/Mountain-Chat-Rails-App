@@ -1,3 +1,9 @@
 <div>
 <h2>List of Mountains</h2>
 </div>
+
+<% @mountains.each do |mountain| %>
+  <div>
+    <h3><%= mountain.name %></h3>
+  </div>
+<% end %>
