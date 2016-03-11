@@ -1,3 +1,9 @@
 <div>
 <h2>List of Mountains</h2>
 </div>
+
+<% @mountains.each do |mountain| %>
+  <div>
+    <h3><%= link_to mountain.name, mountain_trails_path(mountain) %></h3>
+  </div>
+<% end %>

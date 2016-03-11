@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+jackson_hole = Mountain.create(name: "Jackson Hole Mountain Resort", city: "Jackson", state: "Wyoming")
+
+park_city = Mountain.create(name: "Park City Mountain Resort", city: "Park City", state: "Utah")
+
+trail_1 = Trail.create(name: "Trail 1", mountain_id: 1)
+
+trail_2 = Trail.create(name: "Trail 2", mountain_id: 1)
