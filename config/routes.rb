@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   resources :mountains, only: [:index]
   resources :trails, only: [:show]
 
+  resources :mountains do
+    resources :trails, only: [:index]
+  end
+
   resources :trails do
     resources :comments, only: [:new, :create, :edit, :destroy]
     resources :votes, only: [:create, :destroy]
