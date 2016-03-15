@@ -24,8 +24,12 @@ html, body {
   bottom: 0;
 }
 
+ul {
+  text-align: right;
+}
+
 ul li {
   list-style: none;
-  text-align: right;
-  padding-right: 3em;
+  padding-right: 1em;
+  display: inline;
 }
