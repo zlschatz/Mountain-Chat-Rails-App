@@ -1,3 +1,13 @@
 <div>
 <h2><%= @trail.name %></h2>
 </div>
+
+<%= link_to 'Chat', new_trail_comment_path(@trail) %>
+
+<% @comments.each do |comment| %>
+  <div>
+    <ul>
+      <li><%= comment.content%></li>
+    </ul>
+  </div>
+<% end %>
