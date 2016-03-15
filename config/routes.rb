@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :trails, only: [:show]
 
   resources :mountains do
-    resources :trails, only: [:index]
+    resources :trails, only: [:index, :show]
   end
 
   # resources :trails do
