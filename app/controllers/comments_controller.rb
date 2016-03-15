@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
   def new
     @trail = Trail.find(params[:trail_id])
-    @comments = @trail.comments
+    @comment = Comment.new
     render :new
   end
 
