@@ -1,6 +1,7 @@
 <%= form_for [@trail, Comment.new] do |f| %>
   <p>
     <%= f.text_area :content %>
+    <%= f.hidden_field :trail_id, :value => @trail.id %>
   </p>
   <p>
     <%= f.submit 'Submit' %>
