@@ -17,9 +17,9 @@
 <footer class="bottom-banner">
   <ul>
     <% if current_user %>
-      <li>Welcome, <%= current_user.name%></li>
+      <li>Welcome, <%= current_user.name %></li>
     <% else %>
-      <li>Login</li>
+      <li><%= link_to 'Login', new_user_path %></li>
     <% end %>
   </ul>
 </footer>
