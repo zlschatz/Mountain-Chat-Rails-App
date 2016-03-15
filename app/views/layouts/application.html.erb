@@ -14,5 +14,14 @@
 </header>
 <%= yield %>
 
+<footer class="bottom-banner">
+  <ul>
+    <% if current_user %>
+      <li>Welcome, <%= current_user.name%></li>
+    <% else %>
+      <li>Login</li>
+    <% end %>
+  </ul>
+</footer>
 </body>
 </html>
