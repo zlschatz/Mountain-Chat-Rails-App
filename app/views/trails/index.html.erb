@@ -4,6 +4,6 @@
 
 <% @trails.each do |trail| %>
   <div>
-    <h3><%= trail.name %></h3>
+    <h3><%= link_to trail.name, trail_path(trail) %></h3>
   </div>
 <% end %>
