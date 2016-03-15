@@ -4,23 +4,23 @@ Rails.application.routes.draw do
   resources :trails, only: [:show]
 
   resources :mountains do
-    resources :trails, only: [:index]
+    resources :trails, only: [:index, :show]
   end
 
-  resources :trails do
-    resources :comments, only: [:new, :create, :edit, :destroy]
-    resources :votes, only: [:create, :destroy]
-  end
+  # resources :trails do
+  #   resources :comments, only: [:new, :create, :edit, :destroy]
+  #   resources :votes, only: [:create, :destroy]
+  # end
 
 
-  resources :users, only: [:new, :show, :create]
-  resources :sessions, only: [:new, :create, :destroy]
+  # resources :users, only: [:new, :show, :create]
+  # resources :sessions, only: [:new, :create, :destroy]
 
   root 'mountains#index'
 
-  get 'login' => 'sessions#new'
-  delete 'logout' => 'sessions#destroy'
-  get 'register' => 'users#new'
+  # get 'login' => 'sessions#new'
+  # delete 'logout' => 'sessions#destroy'
+  # get 'register' => 'users#new'
 
 
 
