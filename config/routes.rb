@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
 
-  # resources :users, only: [:new, :show, :create]
+  resources :users, only: [:new, :show, :create]
   resources :sessions, only: [:new, :create, :destroy]
 
   root 'mountains#index'
