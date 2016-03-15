@@ -13,14 +13,14 @@ Rails.application.routes.draw do
   end
 
 
-  # resources :users, only: [:new, :show, :create]
-  # resources :sessions, only: [:new, :create, :destroy]
+  resources :users, only: [:new, :show, :create]
+  resources :sessions, only: [:new, :create, :destroy]
 
   root 'mountains#index'
 
-  # get 'login' => 'sessions#new'
-  # delete 'logout' => 'sessions#destroy'
-  # get 'register' => 'users#new'
+  get 'login' => 'sessions#new'
+  delete 'logout' => 'sessions#destroy'
+  get 'register' => 'users#new'
 
 
 
