@@ -8,6 +8,7 @@ class TrailsController < ApplicationController
 
   def show
     @trail = Trail.find(params[:id])
+    @comments = @trail.comments
     render :show
   end
 

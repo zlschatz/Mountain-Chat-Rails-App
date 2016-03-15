@@ -7,10 +7,10 @@ Rails.application.routes.draw do
     resources :trails, only: [:index, :show]
   end
 
-  # resources :trails do
-  #   resources :comments, only: [:new, :create, :edit, :destroy]
+  resources :trails do
+    resources :comments, only: [:new, :create]
   #   resources :votes, only: [:create, :destroy]
-  # end
+  end
 
 
   # resources :users, only: [:new, :show, :create]
