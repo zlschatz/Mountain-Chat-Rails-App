@@ -2,9 +2,13 @@
 <h2><%= @trail.name %></h2>
 </div>
 
-<%= link_to 'Chat', new_trail_comment_path(@trail) %>
 
 <% @comments.each do |comment| %>
+  <div class="vote-container">
+    <%= image_tag("snowflake.png", class: "snowflake") %>
+    <br>
+    <%= comment.votes.sum(:value) %>
+  </div>
   <div class="comment-container">
     <ul>
       <li><p class="comment"><%= comment.content%></p></li><br>
