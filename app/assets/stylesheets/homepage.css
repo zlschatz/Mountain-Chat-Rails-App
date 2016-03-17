@@ -36,11 +36,15 @@ ul li {
 
 .comment-container {
   width: 100%;
-  height: 3em;
+  border: 1px solid black;
 }
 
 .comment-container ul {
   text-align: left;
   width: 50%;
+  height: 100%;
   font-size: 1.2em;
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
