@@ -1,13 +1,20 @@
 <div>
 <h2><%= @trail.name %></h2>
+<%= link_to 'Chat', new_trail_comment_path(@trail) %>
 </div>
 
-<%= link_to 'Chat', new_trail_comment_path(@trail) %>
+
 
 <% @comments.each do |comment| %>
-  <div>
+  <div class="vote-container">
+    <%= image_tag("snowflake.png", class: "snowflake") %>
+    <br>
+    <%= comment.votes.sum(:value) %>
+  </div>
+  <div class="comment-container">
     <ul>
-      <li><%= comment.content%></li>
+      <li><p class="comment"><%= comment.content%></p></li><br>
+      <li>Posted by: <%= comment.user.name %></p></li>
     </ul>
   </div>
 <% end %>

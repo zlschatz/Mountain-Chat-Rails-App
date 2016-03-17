@@ -24,12 +24,41 @@ html, body {
   bottom: 0;
 }
 
-ul {
+/*ul {
   text-align: right;
-}
+}*/
 
 ul li {
   list-style: none;
   padding-right: 1em;
   display: inline;
+}
+
+.comment-container {
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+.comment-container ul {
+  text-align: left;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+.comment {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.vote-container{
+  width: 20%;
+  float: left;
+  padding-top: 1.5em;
+  vertical-align: middle;
+}
+
+.snowflake {
+  width: 2em;
+  height: 2em;
 }
