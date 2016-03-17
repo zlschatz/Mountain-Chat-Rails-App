@@ -7,7 +7,8 @@
 <% @comments.each do |comment| %>
   <div class="comment-container">
     <ul>
-      <li><%= comment.content%></li>
+      <p class="comment"><li><%= comment.content%></li></p>
+      <p class="by-lin"><li>Posted by: <%= comment.user.name %></li></p>
     </ul>
   </div>
 <% end %>
