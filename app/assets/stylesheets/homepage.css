@@ -36,7 +36,7 @@ ul li {
 
 .comment-container {
   width: 100%;
-  border: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .comment-container ul {
@@ -49,4 +49,16 @@ ul li {
 .comment {
   font-size: 1.2em;
   margin: 0;
+}
+
+.vote-container{
+  width: 20%;
+  float: left;
+  padding-top: 1.5em;
+  vertical-align: middle;
+}
+
+.snowflake {
+  width: 2em;
+  height: 2em;
 }
