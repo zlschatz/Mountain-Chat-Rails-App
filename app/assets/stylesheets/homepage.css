@@ -43,8 +43,10 @@ ul li {
   text-align: left;
   width: 50%;
   height: 100%;
-  font-size: 1.2em;
   margin: auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
+}
+
+.comment {
+  font-size: 1.2em;
+  margin: 0;
 }
