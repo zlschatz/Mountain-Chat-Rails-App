@@ -10,12 +10,16 @@
 
 <% @comments.each do |comment| %>
   <div class="vote-container">
-    <%= link_to image_tag("snowflake.png", class: "snowflake"), {:controller => "votes",
-        :action => "create",
-        :comment_id => comment.id,
-        :user_id => current_user.id,
-        :value => "1"},
-        :method => "post" %>
+    <% if current_user %>
+      <%= link_to image_tag("snowflake.png", class: "snowflake"), {:controller => "votes",
+          :action => "create",
+          :comment_id => comment.id,
+          :user_id => current_user.id,
+          :value => "1"},
+          :method => "post" %>
+    <% else %>
+      <%= link_to image_tag("snowflake.png", class: "snowflake") %>
+    <% end %>
     <br>
     <%= comment.votes.sum(:value) %>
   </div>
