@@ -6,6 +6,7 @@ class VotesController < ApplicationController
     if !@comment.votes.find_by(user_id: current_user.id) && @vote.save
       redirect_to trail_path(@vote.comment.trail.id)
     else
+      @comment.votes.find_by(user_id: current_user.id).destroy
       redirect_to trail_path(@vote.comment.trail.id)
     end
   end
