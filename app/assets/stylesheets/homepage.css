@@ -53,7 +53,7 @@ ul li {
 
 .comment-container {
   width: 100%;
-  border-top: 1px solid black;
+  border-top: 1px dotted #8aacb8;
 }
 
 .comment-container ul {
@@ -84,3 +84,27 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.trail-header {
+  width: 100%;
+  height: 2em;
+  font-size: 110%;
+}
+.trail-header ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.sort {
+  float: left;
+  padding: 0;
+}
+
+.trail-name {
+}
+
+.post-comment{
+  float: right;
+}
+
+

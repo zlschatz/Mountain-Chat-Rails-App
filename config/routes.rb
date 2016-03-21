@@ -9,9 +9,11 @@ Rails.application.routes.draw do
 
   resources :trails do
     resources :comments, only: [:new, :create]
-  #   resources :votes, only: [:create, :destroy]
   end
 
+  resources :comments do
+    resources :votes, only: [:create, :destroy]
+  end
 
   resources :users, only: [:new, :show, :create]
   resources :sessions, only: [:new, :create, :destroy]
