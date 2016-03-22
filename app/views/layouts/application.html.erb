@@ -23,7 +23,7 @@
       <li>Home</li>
       <li>Star</li>
       <li>Messages</li>
-      <li>Profile</li>
+      <li><%= link_to("Profile", user_path(current_user)) %></li>
       <li><%= link_to("Log Out", session_path(current_user), method: :delete) %></li>
     <% else %>
       <li><%= link_to 'Login', new_session_path %></li>
