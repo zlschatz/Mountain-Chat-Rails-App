@@ -1,0 +1,30 @@
+<div class="profile-header">
+  <ul>
+    <li class="left"><%= link_to 'Trend', '#' %> // <%= link_to 'New', '#' %></li>
+    <li class="profile-name"><%= @user.name %> Posts</li>
+    <li class="right">TBD</li>
+  </ul>
+</div>
+
+<% @user.comments.each do |comment| %>
+  <div class="vote-container">
+    <% if current_user %>
+      <%= link_to image_tag("snowflake.png", class: "snowflake"), {:controller => "votes",
+          :action => "create",
+          :comment_id => comment.id,
+          :user_id => current_user.id,
+          :value => "1"},
+          :method => "post" %>
+    <% else %>
+      <%= link_to image_tag("snowflake.png", class: "snowflake") %>
+    <% end %>
+    <br>
+    <%= comment.votes.sum(:value) %>
+  </div>
+  <div class="comment-container">
+    <ul>
+      <li><p class="comment"><%= comment.content%></p></li><br>
+      <li><%= comment.trail.name %> @ <%= comment.trail.mountain.name %></li>
+    </ul>
+  </div>
+<% end %>
