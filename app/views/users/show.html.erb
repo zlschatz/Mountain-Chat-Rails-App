@@ -24,7 +24,7 @@
   <div class="comment-container">
     <ul>
       <li><p class="comment"><%= comment.content%></p></li><br>
-      <li>Posted by: <%= comment.user.name %></p></li>
+      <li><%= comment.trail.name %> @ <%= comment.trail.mountain.name %></li>
     </ul>
   </div>
 <% end %>
