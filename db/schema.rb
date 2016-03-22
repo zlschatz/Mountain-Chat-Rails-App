@@ -14,36 +14,36 @@
 ActiveRecord::Schema.define(version: 20160309210348) do
 
   create_table "comments", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.integer  "trail_id"
+    t.text     "content",    null: false
+    t.integer  "user_id",    null: false
+    t.integer  "trail_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "mountains", force: :cascade do |t|
-    t.string "name"
-    t.string "city"
-    t.string "state"
+    t.string "name",  null: false
+    t.string "city",  null: false
+    t.string "state", null: false
   end
 
   create_table "trails", force: :cascade do |t|
-    t.string  "name"
-    t.integer "mountain_id"
+    t.string  "name",        null: false
+    t.integer "mountain_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "name",            limit: 20, null: false
+    t.string   "email",                      null: false
+    t.string   "password_digest",            null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "votes", force: :cascade do |t|
-    t.integer  "value"
-    t.integer  "user_id"
-    t.integer  "comment_id"
+    t.integer  "value",      null: false
+    t.integer  "user_id",    null: false
+    t.integer  "comment_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
