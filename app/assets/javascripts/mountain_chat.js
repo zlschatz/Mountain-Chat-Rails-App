@@ -24,8 +24,7 @@ $(document).on("ready", function() {
       url : $(event.target).attr('href'),
       data: $(this).serialize(),
     }).done(function(response){
-      debugger;
-      console.log("success!");
+      $(response).insertAfter('.trail-header');
     }).fail(function(response){
       alert("You are unable to post a comment.");
     });
