@@ -3,7 +3,11 @@ class CommentsController < ApplicationController
   def new
     @trail = Trail.find(params[:trail_id])
     @comment = Comment.new
-    render :new
+    if request.xhr?
+      render :_form, locals: {comment: @comment}, layout:false
+    else
+      render :new
+    end
   end
 
   def create
