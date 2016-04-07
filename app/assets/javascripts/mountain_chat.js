@@ -19,14 +19,29 @@ $(document).on("ready", function() {
 
   $(".post-comment").on("click", function(event){
     event.preventDefault();
-    // debugger;
     $.ajax({
       url : $(event.target).attr('href'),
-      data: $(this).serialize(),
     }).done(function(response){
-      $(response).insertAfter('.trail-header');
+      $(".comment-form").show();
     }).fail(function(response){
       alert("You are unable to post a comment.");
+    });
+  });
+
+  $('.comment-form').on("submit", 'form', function(event){
+    event.preventDefault();
+    var id = $('#comment_trail_id').val()
+    $.ajax({
+      type: $(event.target).attr('method'),
+      url : '/trails/' + id + '/comments',
+      data: $(this).serialize()
+    }).done(function(response){
+      debugger;
+      $(".river").append(response);
+      $(".comment-form").remove();
+      $(".comment-form").hide();
+    }).fail(function(){
+      alert("Your post has not been posted")
     });
   });
 
