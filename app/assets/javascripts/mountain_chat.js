@@ -17,7 +17,7 @@ $(document).on("ready", function() {
   //   });
   // });
 
-  $(".post-comment").on("click", function(event){
+  $("#post").on("click", function(event){
     event.preventDefault();
     $.ajax({
       url : $(event.target).attr('href'),
