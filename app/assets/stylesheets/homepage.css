@@ -130,3 +130,7 @@ a {
 .right{
   float: right;
 }
+
+.comment-form {
+  display: none;
+}
