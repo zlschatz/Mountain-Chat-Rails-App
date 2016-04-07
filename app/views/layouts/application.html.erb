@@ -15,7 +15,9 @@
       <li class="left"><%= link_to 'Trend', '#' %></li>
       <li class="left"><%= link_to 'New', '#' %></li>
       <li><%= link_to 'Mountain Chat', root_path %></li>
+      <% if @user %>
       <li class="right"><%= link_to("Log Out", session_path(current_user), method: :delete) %></li>
+      <% end %>
       <li class="right"><%= link_to("Profile", user_path(current_user)) %></li>
       <% if @trail %>
       <li id="post" class="right"><%= link_to 'Post', new_trail_comment_path(@trail) %></li>
