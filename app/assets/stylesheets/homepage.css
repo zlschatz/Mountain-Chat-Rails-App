@@ -125,3 +125,16 @@ a {
 .comment-form {
   display: none;
 }
+
+textarea {
+  width: 80%;
+  height: 5em;
+  border-radius: 2em;
+  border-color: #8aacb8;
+}
+
+input {
+  background-color: #8aacb8;
+  border-radius: 2em;
+  width: 30%;
+}
