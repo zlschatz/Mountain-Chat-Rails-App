@@ -1,10 +1,4 @@
-<div class="profile-header">
-  <ul>
-    <li class="profile-name"><%= @user.name %> Posts</li>
-  </ul>
-</div>
-
-<% @user.comments.each do |comment| %>
+<% @comments.each do |comment| %>
   <div class="vote-container">
     <% if current_user %>
       <%= link_to image_tag("snowflake.png", class: "snowflake"), {:controller => "votes",
@@ -22,7 +16,7 @@
   <div class="comment-container">
     <ul>
       <li><p class="comment"><%= comment.content%></p></li><br>
-      <li><%= comment.trail.name %> @ <%= comment.trail.mountain.name %></li>
+      <li>Posted by: <%= comment.user.name %></p></li>
     </ul>
   </div>
 <% end %>

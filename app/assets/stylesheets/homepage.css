@@ -6,7 +6,7 @@ html, body{
   text-align: center;
 }
 
-.top-nav{
+nav{
   background-color: #F0F9FD;
   font-size: 1em;
   color: #8aacb8;
@@ -17,20 +17,16 @@ html, body{
   padding-bottom: 2em;
 }
 
-.bottom-banner{
-  background-color: #F0F9FD;
-  font-size: 1em;
-  color: #8aacb8;
-  width: 100%;
-  height: 10%;
-  position: fixed;
-  bottom: 0;
-}
-
-.bottom-banner ul {
+nav ul {
   width: 100%;
   padding: 0;
   padding-top: 1em;
+}
+
+nav ul li {
+  list-style: none;
+  padding-right: 1em;
+  display: inline;
 }
 
 .main-container {
@@ -95,16 +91,18 @@ a {
     overflow: hidden;
 }
 
-.sort {
+.left {
   float: left;
-  padding: 0;
+  padding-left: 1em;
 }
 
 .trail-name {
+  font-size: 120%;
 }
 
-.post-comment{
+.right{
   float: right;
+  padding-right: 1em;
 }
 
 .profile-header {
@@ -118,15 +116,26 @@ a {
   overflow: hidden;
 }
 
-.left {
-  float: left;
-  padding: 0;
-}
-
 .profile-name {
   padding: 0;
 }
 
 .right{
   float: right;
+}
+
+.comment-form {
+  display: none;
+}
+
+textarea {
+  width: 80%;
+  height: 5em;
+  border-color: #8aacb8;
+}
+
+input {
+  background-color: #8aacb8;
+  border-radius: 2em;
+  width: 30%;
 }
