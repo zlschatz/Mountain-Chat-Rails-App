@@ -6,8 +6,19 @@
   </ul>
 </div>
 
+<div class="comment-form">
+<%= form_for @comment do |f| %>
+  <p>
+    <%= f.text_area :content %>
+    <%= f.hidden_field :trail_id, :value => params[:id] %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>
+</div>
 
-
+<div class="river">
 <% @comments.each do |comment| %>
   <div class="vote-container">
     <% if current_user %>
@@ -30,3 +41,4 @@
     </ul>
   </div>
 <% end %>
+</div>
