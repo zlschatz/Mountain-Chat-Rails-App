@@ -91,15 +91,15 @@ a {
     overflow: hidden;
 }
 
-.sort {
+.left {
   float: left;
-  padding: 0;
+  padding-left: 2em;
 }
 
 .trail-name {
 }
 
-.post-comment{
+.right{
   float: right;
 }
 
@@ -112,11 +112,6 @@ a {
 .profile-header ul {
   list-style-type: none;
   overflow: hidden;
-}
-
-.left {
-  float: left;
-  padding: 0;
 }
 
 .profile-name {
