@@ -4,17 +4,19 @@ class CommentsController < ApplicationController
     @trail = Trail.find(params[:trail_id])
     @comment = Comment.new
     if request.xhr?
-      render :_form, locals: {comment: @comment}, layout:false
+      render :_form, locals: {comment: @comment}, layout: false
     else
       render :new
     end
   end
 
   def create
+    # binding.pry
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
-    if @comment.save
-      redirect_to trail_path(:id => params[:trail_id])
+    if request.xhr? && @comment.save
+      # redirect_to trail_path(:id => params[:comment][:trail_id])
+      render :_form, locals: {comment: @comment}, layout: false
     else
       render :new
     end
