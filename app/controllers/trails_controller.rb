@@ -2,7 +2,7 @@ class TrailsController < ApplicationController
 
   def index
     @mountain = Mountain.find(params[:mountain_id])
-    @trails = @mountain.trails
+    @trails = @mountain.trails.order('name ASC')
     render :index
   end
 
