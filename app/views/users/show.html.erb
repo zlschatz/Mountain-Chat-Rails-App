@@ -1,7 +1,5 @@
 <div class="profile-header">
-  <ul>
-    <li class="profile-name"><%= @user.name %> Posts</li>
-  </ul>
+  <h3><%= @user.name %> Posts</h3>
 </div>
 
 <% @user.comments.each do |comment| %>
@@ -26,3 +24,11 @@
     </ul>
   </div>
 <% end %>
+
+<% if @user.comments.empty? %>
+  <p class='about'>Looks like you haven't posted yet! <br> Find your favorite trails and leave comments for other riders.</p>
+<% end %>
+
+<div class="go-back">
+  <h4><%= link_to '&larr; Previous Page'.html_safe, request.referer.present? ? request.referer : default_path %></h4>
+</div>

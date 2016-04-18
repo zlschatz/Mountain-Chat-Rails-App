@@ -22,13 +22,13 @@ vail = Mountain.create(name: "Vail Mountain Resort", city: "Vail", state: "Color
 
 snowbird = Mountain.create(name: "Snowbird Ski Resort", city: "Snowbird", state: "Utah")
 
-trail_1 = Trail.create(name: "Trail 1", mountain_id: 1)
+trail_1 = Trail.create(name: "Trail A", mountain_id: 1)
 
-trail_2 = Trail.create(name: "Trail 2", mountain_id: 1)
+trail_2 = Trail.create(name: "Trail C", mountain_id: 1)
 
-trail_3 = Trail.create(name: "Trail 3", mountain_id: 1)
+trail_3 = Trail.create(name: "Trail D", mountain_id: 1)
 
-trail_4 = Trail.create(name: "Trail 4", mountain_id: 1)
+trail_4 = Trail.create(name: "Trail B", mountain_id: 1)
 
 Comment.create(content: "Sunny on the right side. Bumped on the left.", trail_id: 1, user_id: 1)
 Comment.create(content: "Dust over crust. Beware!", trail_id: 1, user_id: 2)

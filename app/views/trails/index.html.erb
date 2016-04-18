@@ -1,5 +1,5 @@
 <div>
-<h2>List of Trails</h2>
+  <h3><%= @mountain.name %> Trails</h3>
 </div>
 
 <% @trails.each do |trail| %>
@@ -7,3 +7,7 @@
     <h3><%= link_to trail.name, trail_path(trail) %></h3>
   </div>
 <% end %>
+
+<div class="go-back">
+  <h4><%= link_to '&larr; Mountain List'.html_safe, root_path %></h4>
+</div>
