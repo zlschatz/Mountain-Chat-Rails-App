@@ -16,3 +16,25 @@
   <%= submit_tag 'Log In'%>
 
 <% end %>
+
+<h2>New User Signup:</h2>
+<%= form_for User.new do |f| %>
+
+  <div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  </div>
+
+  <div>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  </div>
+
+  <div>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  </div>
+
+  <%= f.submit 'Create Account'%>
+
+<% end %>
