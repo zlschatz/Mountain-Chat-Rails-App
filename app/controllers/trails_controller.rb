@@ -8,9 +8,15 @@ class TrailsController < ApplicationController
 
   def show
     @trail = Trail.find(params[:id])
-    @comments = @trail.comments
+    @comments = sort_comments_by_votes(@trail.comments)
     @comment = Comment.new
     render :show
+  end
+
+  private
+
+  def sort_comments_by_votes(comments)
+    comments.sort_by { |comment| [comment.votes.count, comment.created_at] }.reverse
   end
 
 end
