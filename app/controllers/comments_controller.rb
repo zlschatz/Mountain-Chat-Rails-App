@@ -20,6 +20,13 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment = Comment.find(params[:id])
+    trail_id = @comment.trail.id
+    @comment.destroy
+    redirect_to trail_path(trail_id)
+  end
+
   private
 
   def comment_params
