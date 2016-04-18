@@ -22,13 +22,37 @@ vail = Mountain.create(name: "Vail Mountain Resort", city: "Vail", state: "Color
 
 snowbird = Mountain.create(name: "Snowbird Ski Resort", city: "Snowbird", state: "Utah")
 
-trail_1 = Trail.create(name: "Trail A", mountain_id: 1)
+trail_1 = Trail.create(name: "Bivouac", mountain_id: 1)
 
-trail_2 = Trail.create(name: "Trail C", mountain_id: 1)
+trail_2 = Trail.create(name: "Thunder", mountain_id: 1)
 
-trail_3 = Trail.create(name: "Trail D", mountain_id: 1)
+trail_3 = Trail.create(name: "Corbet's Couloir", mountain_id: 1)
 
-trail_4 = Trail.create(name: "Trail B", mountain_id: 1)
+trail_4 = Trail.create(name: "Kemmerer", mountain_id: 1)
+
+trail_5 = Trail.create(name: "Double Jack", mountain_id: 2)
+
+trail_6 = Trail.create(name: "New Moon", mountain_id: 2)
+
+trail_7 = Trail.create(name: "Shadow Ridge", mountain_id: 2)
+
+trail_8 = Trail.create(name: "Fortune Teller", mountain_id: 2)
+
+trail_9 = Trail.create(name: "Chopstix", mountain_id: 3)
+
+trail_10 = Trail.create(name: "The Slot", mountain_id: 3)
+
+trail_11 = Trail.create(name: "Sweet N Sour", mountain_id: 3)
+
+trail_12 = Trail.create(name: "Headwall", mountain_id: 3)
+
+trail_13 = Trail.create(name: "Gadzooks", mountain_id: 4)
+
+trail_14 = Trail.create(name: "Bananas", mountain_id: 4)
+
+trail_15 = Trail.create(name: "Lone Star", mountain_id: 4)
+
+trail_16 = Trail.create(name: "Regulator Johnson", mountain_id: 4)
 
 Comment.create(content: "Sunny on the right side. Bumped on the left.", trail_id: 1, user_id: 1)
 Comment.create(content: "Dust over crust. Beware!", trail_id: 1, user_id: 2)
