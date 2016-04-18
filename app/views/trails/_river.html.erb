@@ -25,3 +25,7 @@
     </ul>
   </div>
 <% end %>
+
+<% if @comments.empty? %>
+  <p class='about'>Been on this trail recently? <br> No one has posted yet, and others are wondering about the conditions!</p>
+<% end %>
