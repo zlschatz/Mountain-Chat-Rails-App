@@ -19,6 +19,8 @@
       <li>Posted by: <%= comment.user.name %></li>
       <% if comment.user.id == current_user.id %>
       <li><%= link_to 'Delete', comment_path(comment.id), method: :delete %></p></li>
+      <% else %>
+        </p>
       <% end %>
     </ul>
   </div>
