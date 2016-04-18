@@ -141,7 +141,6 @@ input {
 }
 
 .go-back{
-  position: absolute;
-  bottom: 0;
+  float: left;
   padding-left: 2em;
 }
