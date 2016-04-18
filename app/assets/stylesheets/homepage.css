@@ -76,6 +76,11 @@ ul li {
   height: 2em;
 }
 
+.info {
+  width: 1em;
+  height: 1em;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -143,4 +148,8 @@ input {
 .go-back{
   float: left;
   padding-left: 2em;
+}
+
+.about{
+  padding: 1em;
 }
