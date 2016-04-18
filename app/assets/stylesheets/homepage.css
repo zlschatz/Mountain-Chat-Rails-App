@@ -140,9 +140,12 @@ textarea {
 }
 
 input {
-  background-color: #8aacb8;
-  border-radius: 2em;
+  background-color: #fff;
   width: 30%;
+}
+
+form div{
+  padding-top: 1em;
 }
 
 .go-back{
