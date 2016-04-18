@@ -15,10 +15,10 @@
   </div>
   <div class="comment-container">
     <ul>
-      <li><p class="comment"><%= comment.content%></p></li><br>
-      <li>Posted by: <%= comment.user.name %></p></li>
+      <li><p class="comment"><%= comment.content%></li><br>
+      <li>Posted by: <%= comment.user.name %></li>
       <% if comment.user.id == current_user.id %>
-        <li><%= link_to 'Delete', comment_path(comment.id), method: :delete %></li>
+      <li><%= link_to 'Delete', comment_path(comment.id), method: :delete %></p></li>
       <% end %>
     </ul>
   </div>
