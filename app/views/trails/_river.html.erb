@@ -16,7 +16,7 @@
   <div class="comment-container">
     <ul>
       <li><p class="comment"><%= comment.content%></li><br>
-      <li>Posted by: <%= comment.user.name %></li>
+      <li>By: <%= comment.user.name %></li>
       <% if current_user && comment.user.id == current_user.id %>
       <li><%= link_to 'Delete', comment_path(comment.id), method: :delete %></p></li>
       <% else %>
