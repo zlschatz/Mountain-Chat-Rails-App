@@ -7,6 +7,10 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 
+  <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Catamaran:400,300,500,700' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 <nav class="top-nav">
@@ -15,7 +19,7 @@
       <li class="left"><%= link_to 'About', about_path %></li>
       <li><%= link_to 'Mountain Chat', root_path %></li>
       <% if @user %>
-        <li class="right"><%= link_to("Log Out", session_path(current_user), method: :delete) %></li>
+        <li class="right"><%= link_to("Logout", session_path(current_user), method: :delete) %></li>
       <% else %>
         <li class="right"><%= link_to("Profile", user_path(current_user)) %></li>
       <% end %>
